@@ -1,0 +1,47 @@
+<?xml version="1.0" standalone='no'?>
+<!DOCTYPE manpage SYSTEM "http://masqmail.cx/xmltoman/xmltoman.dtd">
+<?xml-stylesheet type="text/xsl" href="http://masqmail.cx/xmltoman/xmltoman.xsl" ?>
+
+<manpage name="xmltoman" section="1" desc="xml to man converter">
+
+<synopsis>
+<cmd>xmltoman <arg>file.1.xml</arg> > file.1</cmd>
+</synopsis>
+
+<description>
+
+<p>xmltoman is a small script to convert xml to a man page in groff
+format. It features the usual man page items such a description,
+options, see also etc. The xml format also supports converting to html
+pages.</p>
+
+<p>You will find the dtd in <file>/usr/share/xmltoman/</file> on a
+debian system. There is also an xsl file to generate html using
+<manref name="xsltproc" section="1"/>.
+See also <file>/usr/share/doc/xmltoman/examples</file> for examples.</p>
+
+</description>
+
+<section name ="Files">
+<p><file>/usr/share/xmltoman/xmltoman.dtd</file> the DTD file.</p>
+<p><file>/usr/share/xmltoman/xmltoman.xsl</file> XSLT stylesheet to generate html.</p>
+<p><file>/usr/share/xmltoman/xmltoman.css</file> stylesheet to be used for HTML.</p>
+</section>
+
+<section name = "Author">
+<p>xmltoman was written by Oliver Kurth
+&lt;oku@masqmail.cx&gt;</p>
+</section>
+
+<section name = "See also">
+<p><manref name="xmlmantohtml" section="1"/></p>
+</section>
+
+<section name = "Comments">
+
+<p>This man page was written using <manref name="xmltoman" section="1"
+href="http://masqmail.cx/xmltoman/"/> by the same author.</p>
+
+</section>
+
+</manpage>
