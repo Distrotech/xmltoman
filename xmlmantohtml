@@ -129,11 +129,21 @@ sub handle_char{
   my $expat = shift;
   my $string = shift;
 
+  $string =~ s/&/&amp;/gs;
+  $string =~ s/</&lt;/gs;
+  $string =~ s/>/&gt;/gs;
+  $string =~ s/"/&quot;/gs;
+
   $buffer .= $string;
 }
 
 MAIN:{
   my $file = shift;
+
+  if (!$file) {
+    print STDERR "You need to specify a file to parse\n";
+    exit(1);
+  }
 
   my $parser = new XML::Parser(Handlers => {Start => \&handle_start,
 					    End   => \&handle_end,
